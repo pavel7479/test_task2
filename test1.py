@@ -10,3 +10,4 @@ def get_all_students():
 students = get_all_students()
 for i in students:
     print(i)
+

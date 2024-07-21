@@ -44,3 +44,11 @@ def get_all_students_course(course: int, major: Optional[str] = None, enrollment
         filtered_students = [student for student in filtered_students if student['enrollment_year'] == enrollment_year]
 
     return filtered_students
+
+@app.get("/students/id/{student_id}")
+def get_student_by_path(student_id: int):
+    students = json_to_dict_list(path_to_json)
+    for student in students:
+        if student["student_id"] == student_id:
+            return student
+

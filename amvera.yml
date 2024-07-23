@@ -9,3 +9,6 @@ build:
 run:
   persistenceMount: /data
   containerPort: 80
+scripts:
+  install: pip install -r requirements.txt
+  start: python app/main.py
